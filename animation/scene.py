@@ -29,6 +29,6 @@ class AnimateLogo(Scene):
         logoC = logoB.deepcopy()
         self.play(Write(logoA[2:4]))
         self.play(Write(logoB[::len(logoB)-1]), Transform(logoA[2:3], logoB[2:3]))
-        self.play(Write(logoC[0:2]))
-        self.play(FadeOut(logoA[2:4]), FadeOut(logoB[::len(logoB)-1]), FadeOut(logoC[0:2]))
+        self.play(Write(logoC[0:2]), FadeOut(logoA[3]))
+        self.play(FadeOut(logoA[2:3]), FadeOut(logoB[::len(logoB)-1]), FadeOut(logoC[0:2]))
         self.wait()
