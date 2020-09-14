@@ -1,4 +1,6 @@
 logo.aux
 logo.log
 logo.pdf
-dist/
+dist
+media
+__pycache__
