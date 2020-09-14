@@ -1,6 +1,6 @@
 from manim import *
 
-class AnimateLogo(Scene):
+class TextToLogo(Scene):
     # def construct(self):
     #     logoCS = TextMobject('\\textbf{C \\\\ S}')
     #     logoTop = TextMobject('Club')
@@ -20,4 +20,15 @@ class AnimateLogo(Scene):
         self.play(Transform(logoStart, logoEnd))
         self.wait()
         self.play(FadeOut(logoStart))
+        self.wait()
+
+class AnimateLogo(Scene):
+    def construct(self):
+        logoA = TextMobject("\\hspace{3em}C", "lub \\\\", "JFS", "S")
+        logoB = TextMobject("\\hspace{3em}\\textbf{C}", "lub \\\\","JFS", "\\textbf{S}")
+        logoC = logoB.deepcopy()
+        self.play(Write(logoA[2:4]))
+        self.play(Write(logoB[::len(logoB)-1]), Transform(logoA[2:3], logoB[2:3]))
+        self.play(Write(logoC[0:2]))
+        self.play(FadeOut(logoA[2:4]), FadeOut(logoB[::len(logoB)-1]), FadeOut(logoC[0:2]))
         self.wait()
