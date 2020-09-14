@@ -1,34 +1,42 @@
 from manim import *
 
-class TextToLogo(Scene):
-    # def construct(self):
-    #     logoCS = TextMobject('\\textbf{C \\\\ S}')
-    #     logoTop = TextMobject('Club')
-    #     logoBottom = TextMobject('JFSS')
-    #     VGroup(logoTop, logoBottom).arrange(DOWN)
-    #     self.play(Write(logoTop))
-    #     self.play(Write(logoBottom))
-    #     self.play(
-    #             ApplyMethod(logoTop.shift, 0.5*RIGHT),
-    #             ApplyMethod(logoBottom.shift, 0.5*LEFT)
-    #     )
-    def construct(self):
-        logoStart = TextMobject("JFSS CS Club")
-        logoEnd = TextMobject("\\hspace{3em}\\textbf{C}lub \\\\ JFS\\textbf{S}")
-        self.play(Write(logoStart))
-        self.wait()
-        self.play(Transform(logoStart, logoEnd))
-        self.wait()
-        self.play(FadeOut(logoStart))
-        self.wait()
-
 class AnimateLogo(Scene):
     def construct(self):
         logoA = TextMobject("\\hspace{3em}C", "lub \\\\", "JFS", "S")
         logoB = TextMobject("\\hspace{3em}\\textbf{C}", "lub \\\\","JFS", "\\textbf{S}")
         logoC = logoB.deepcopy()
         self.play(Write(logoA[2:4]))
-        self.play(Write(logoB[::len(logoB)-1]), Transform(logoA[2:3], logoB[2:3]))
+        self.play(Write(logoB[::len(logoB)-1]), ReplacementTransform(logoA[2], logoB[2]))
         self.play(Write(logoC[0:2]), FadeOut(logoA[3]))
         self.play(FadeOut(logoA[2:3]), FadeOut(logoB[::len(logoB)-1]), FadeOut(logoC[0:2]))
         self.wait()
+
+class AnimateLogoSlogan(Scene):
+    def construct(self):
+        logoUnbolded = TextMobject("\\hspace{3em}C", "lub \\\\", "JFS", "S")
+        logoBolded = TextMobject("\\hspace{3em}\\textbf{C}", "lub \\\\","JFS", "\\textbf{S}")
+        slogan = TextMobject("What will you build?")
+        self.play(Write(logoUnbolded[2:4]))
+        self.play(Write(logoBolded[::len(logoBolded)-1]), ReplacementTransform(logoUnbolded[2], logoBolded[2]), FadeOut(logoUnbolded[3]))
+        self.play(Write(logoBolded[1]))
+        self.wait()
+        self.play(ReplacementTransform(logoBolded, slogan))
+        self.wait()
+        self.play(FadeOut(slogan))
+        self.wait()
+
+class AnimateLogoSloganNoFade(Scene):
+    def construct(self):
+        logo = TextMobject("\\hspace{3em}\\textbf{C}", "lub \\\\", "JFS", "\\textbf{S}")
+        logoWriteable = logo.copy()
+        slogan = TextMobject("What will you build?")
+        text = logo.copy()
+        self.add(text)
+        self.play(Write(logoWriteable[2:4]))
+        self.play(Write(logoWriteable[::len(logoWriteable)-1]))
+        self.play(Write(logoWriteable[0:2]))
+        self.play(FadeOut(logoWriteable), run_time=0.01)
+        self.wait(1)
+        self.play(Transform(text, slogan))
+        self.wait(2)
+        self.play(Transform(text, logo))
