@@ -6,9 +6,10 @@ class AnimateLogo(Scene):
         logoB = TextMobject("\\hspace{3em}\\textbf{C}", "lub \\\\","JFS", "\\textbf{S}")
         logoC = logoB.deepcopy()
         self.play(Write(logoA[2:4]))
-        self.play(Write(logoB[::len(logoB)-1]), ReplacementTransform(logoA[2], logoB[2]))
+        self.play(Write(logoB[::len(logoB)-1]), Transform(logoA[2], logoB[2]))
         self.play(Write(logoC[0:2]), FadeOut(logoA[3]))
-        self.play(FadeOut(logoA[2:3]), FadeOut(logoB[::len(logoB)-1]), FadeOut(logoC[0:2]))
+        self.play(FadeOut(logoC[0]), run_time=0.0001)
+        self.play(FadeOut(logoA[2]), FadeOut(logoB[::len(logoB)-1]), FadeOut(logoC[1]))
         self.wait()
 
 class AnimateLogoSlogan(Scene):
