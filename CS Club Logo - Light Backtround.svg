@@ -12,7 +12,7 @@
    viewBox="0 0 500 300"
    version="1.1"
    id="SVGRoot"
-   sodipodi:docname="CS Club Logo - White.svg"
+   sodipodi:docname="CS Club Logo - Light Backtround.svg"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
   <defs
      id="defs10">
@@ -52,7 +52,7 @@
      inkscape:cx="203.5523"
      inkscape:cy="135.29987"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g62"
      inkscape:document-rotation="0"
      showgrid="true"
      inkscape:window-width="2303"
@@ -72,7 +72,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -99,7 +99,7 @@
            x="120"
            y="110.28837"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.7511px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">JFS</tspan><tspan
-             style="font-weight:bold;font-size:32.7511px">S</tspan></tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32.7511px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold'">S</tspan></tspan></text>
       <text
          xml:space="preserve"
          id="text44"
@@ -107,7 +107,7 @@
          transform="matrix(2.9311948,0,0,2.9311948,-345.75568,-37.264739)"><tspan
            x="180"
            y="60.28837"><tspan
-             style="font-weight:bold;font-size:32.7511px">C</tspan><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32.7511px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold'">C</tspan><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.7511px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">lub</tspan></tspan></text>
     </g>
   </g>

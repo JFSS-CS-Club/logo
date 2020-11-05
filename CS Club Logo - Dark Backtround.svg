@@ -12,7 +12,7 @@
    viewBox="0 0 500 300"
    version="1.1"
    id="SVGRoot"
-   sodipodi:docname="CS Club Logo - Dark Background.svg"
+   sodipodi:docname="CS Club Logo - Dark Backtround.svg"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
   <defs
      id="defs10">
@@ -52,7 +52,7 @@
      inkscape:cx="203.5523"
      inkscape:cy="135.29987"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g62"
      inkscape:document-rotation="0"
      showgrid="true"
      inkscape:window-width="2303"
@@ -90,8 +90,7 @@
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect34);fill:#000000;fill-opacity:1;stroke:none;" />
     <g
        id="g62"
-       transform="translate(37.328281,2.5955936)"
-       style="fill:#ffffff">
+       transform="translate(37.328281,2.5955936)">
       <text
          xml:space="preserve"
          id="text38"
@@ -100,7 +99,7 @@
            x="120"
            y="110.28837"><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.7511px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';fill:#ffffff">JFS</tspan><tspan
-             style="font-weight:bold;font-size:32.7511px;fill:#ffffff">S</tspan></tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32.7511px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';fill:#ffffff">S</tspan></tspan></text>
       <text
          xml:space="preserve"
          id="text44"
@@ -108,7 +107,7 @@
          transform="matrix(2.9311948,0,0,2.9311948,-345.75568,-37.264739)"><tspan
            x="180"
            y="60.28837"><tspan
-             style="font-weight:bold;font-size:32.7511px;fill:#ffffff">C</tspan><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32.7511px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';fill:#ffffff">C</tspan><tspan
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.7511px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';fill:#ffffff">lub</tspan></tspan></text>
     </g>
   </g>
