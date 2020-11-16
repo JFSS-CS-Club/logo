@@ -1,18 +1,19 @@
 from manim import *
 
 
-class AnimateLogoSlogan(Scene):
+class AnimateLogo(Scene):
     def construct(self):
-        logoUnbolded = TextMobject("\\hspace{3em}C", "lub \\\\", "JFS", "S")
-        logoBolded = TextMobject("\\hspace{3em}\\textbf{C}", "lub \\\\","JFS", "\\textbf{S}")
-        slogan = TextMobject("What will you build?")
-        group = VGroup(logoUnbolded, logoBolded, slogan)
+        logo = Tex("\\hspace{3em}C", "lub \\\\", "JFS", "S")
+        logoGrey = logo.copy().set_color("#AAAAAA")
+        # Make it look like the entirety of Club is being written
+        logoGrey[0].set_color(WHITE)
+        group = VGroup(logo, logoGrey)
         group.set_width(config["frame_width"] - 2 * LARGE_BUFF)
-        self.play(Write(logoUnbolded[2:4]))
-        self.play(Write(logoBolded[::len(logoBolded)-1]), ReplacementTransform(logoUnbolded[2], logoBolded[2]), FadeOut(logoUnbolded[3]))
-        self.play(Write(logoBolded[1]))
+        self.play(Write(logoGrey[2:4]))
+        self.play(Write(logo[::len(logo)-1]))
+        self.play(Write(logoGrey[0:2]))
+        self.remove(logoGrey[3], logoGrey[0])   # Remove unneeded logo parts
         self.wait()
-        self.play(ReplacementTransform(logoBolded, slogan))
-        self.wait()
-        self.play(FadeOut(slogan))
+        self.play(FadeOutAndShift(logoGrey[1:3]),
+                  FadeOutAndShift(logo[::len(logo)-1]))
         self.wait()
